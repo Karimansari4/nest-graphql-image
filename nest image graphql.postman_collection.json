@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "1d0a9017-8f86-4e92-a17d-661ec58ea97e",
+		"name": "nest image graphql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13886612",
+		"_collection_link": "https://winter-firefly-974080.postman.co/workspace/My-Workspace~0dfa37b9-21c4-49e4-8466-928d1e1f108d/collection/13886612-1d0a9017-8f86-4e92-a17d-661ec58ea97e?action=share&source=collection_link&creator=13886612"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/graphql",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-apollo-operation-name",
+						"value": "uploadImage",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "query",
+							"value": "mutation($image: Upload!, $createFileInDirectory: Boolean!) {\n  uploadImage(image: $image, createFileInDirectory: $createFileInDirectory)\n}\n",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "variables",
+							"value": "{\n  \"createFileInDirectory\": true\n}",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/HP/Downloads/holborn2.jpg",
+							"disabled": true
+						},
+						{
+							"key": "map",
+							"value": "{\n  \"0\": [\"variables.image\"]\n}",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "0",
+							"type": "file",
+							"src": "/C:/Users/HP/Downloads/holborn1.jpg",
+							"disabled": true
+						},
+						{
+							"key": "variables",
+							"value": "{\n  \"createFileInDirectory\": true\n}",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "operations",
+							"value": "{\n  \"query\": \"mutation($image: Upload!, $createFileInDirectory: Boolean!) { uploadImage(image: $image, createFileInDirectory: $createFileInDirectory) }\",\n  \"variables\": {\n    \"createFileInDirectory\": true\n  }\n}\n",
+							"type": "text"
+						},
+						{
+							"key": "map",
+							"value": "{\n  \"0\": [\"variables.image\"]\n}",
+							"type": "text"
+						},
+						{
+							"key": "0",
+							"type": "file",
+							"src": "/C:/Users/HP/Downloads/holborn3.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
